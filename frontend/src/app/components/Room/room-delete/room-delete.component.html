@@ -1,0 +1,20 @@
+<mat-card>
+    <mat-card-title>Excluir Room</mat-card-title>
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Nome"
+                [value]="room.name" name="name" disabled>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)"
+                [value]="room.date" name="date" disabled>
+        </mat-form-field>
+    </form>
+    <button mat-raised-button (click)="deleteroom()" color="warn">
+        Excluir
+    </button>
+    
+    <button mat-raised-button (click)="cancel()">
+        Cancelar
+    </button>
+</mat-card>
