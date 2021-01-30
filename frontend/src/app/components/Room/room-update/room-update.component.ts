@@ -11,6 +11,7 @@ import { RoomService } from "../room.service";
 })
 export class RoomUpdateComponent implements OnInit {
   room: Room;
+  submitted= false
 
   constructor(
     private roomService: RoomService,
@@ -30,6 +31,11 @@ export class RoomUpdateComponent implements OnInit {
       this.roomService.showMessage("Room atualizado com sucesso!");
       this.router.navigate(["/"]);
     });
+  }
+
+  onSubmit(){
+    this.submitted=true
+    this.updateroom();
   }
 
   cancel(): void {

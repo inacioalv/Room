@@ -12,7 +12,7 @@ import { RoomService } from '../room.service';
 export class RoomListComponent implements OnInit {
 
   rooms: Room[]
-  displayedColumns = ['id', 'date', 'startHour','endHour', 'action']
+  displayedColumns = ['id','name', 'date', 'startHour','endHour', 'action']
   
   constructor(private roomService: RoomService,
               private router:Router) { }

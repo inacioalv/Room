@@ -6,8 +6,16 @@
                 [(ngModel)]="room.name" name="name">
         </mat-form-field>
         <mat-form-field>
-            <input matInput placeholder="Preço (R$)"
+            <input matInput placeholder="date"
                 [(ngModel)]="room.date" name="date">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="startHour"
+                [(ngModel)]="room.startHour" name="startHour">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="endHour"
+                [(ngModel)]="room.endHour" name="endHour">
         </mat-form-field>
     </form>
     <button mat-raised-button (click)="updateroom()" color="primary">

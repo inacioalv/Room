@@ -13,3 +13,7 @@ table {
 .delete > i {
     color: #e35e6b;
 }
+
+table{
+    background-color: rgb(148, 165, 165)
+}

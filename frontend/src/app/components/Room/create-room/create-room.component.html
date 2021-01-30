@@ -1,6 +1,6 @@
 <mat-card>
-    <mat-card-title>Room</mat-card-title>
-    <form>
+    <mat-card-title>Room create</mat-card-title>
+    <form >
         <mat-form-field>
             <input matInput placeholder="Nome"
                 [(ngModel)]="room.name" name="name">
@@ -18,12 +18,16 @@
                 [(ngModel)]="room.endHour" name="endHour">
         </mat-form-field>
     </form>
-    <button mat-raised-button (click)="createroom()" color="primary">
-        Salvar
+    <button mat-raised-button (click)="onSubmit()" color="primary">
+        Submit
     </button>
     
-    <button mat-raised-button (click)="cancel()">
+    <button mat-raised-button (click)="cancel()" color="warn">
         Cancelar
+    </button>
+
+    <button mat-raised-button [hidden]="!submitted" (click)="newRoom"  >
+        Add
     </button>
 </mat-card>
 

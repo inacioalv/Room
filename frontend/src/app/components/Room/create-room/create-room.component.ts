@@ -18,11 +18,18 @@ export class CreateRoom implements OnInit {
     endHour:''
   }
 
+  submitted= false
+
   constructor(private roomService:RoomService,
       private router: Router) { }
 
   ngOnInit(): void {
     
+  }
+
+  newRoom():void{
+    this.submitted=false;
+    this.room;
   }
 
   createroom(): void {
@@ -31,6 +38,10 @@ export class CreateRoom implements OnInit {
       this.router.navigate(['/'])
     })
 
+  }
+  onSubmit(){
+    this.submitted=true
+    this.createroom();
   }
 
   cancel(): void {
